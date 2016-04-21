@@ -64,6 +64,15 @@ end
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+    def navionics
+      @navioncis = Navionics.all
+    end
+
+
+
+
+
+
   end
 
   private
