@@ -23,8 +23,8 @@
   </thead>
 
   <tbody>
-    <% @users.each do |user| %>
-      <tr>
+    <% @users.each_with_index do |user, index| %>
+      <tr id="<%= index %>">
         <td><%= user.latitude %></td>
         <td><%= user.longitude %></td>
         <td><%= user.address %></td>
@@ -52,6 +52,13 @@
         handler.bounds.extendWith(markers);
         handler.fitMapToBounds();
         });
+
+
+                
+        $('#1').click(function(){
+          alert('hey all');
+        });
+
         
     </script>
 
